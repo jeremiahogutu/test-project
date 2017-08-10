@@ -1,19 +1,38 @@
 function uniqueIncrement(value) {
+	//change the user input to a string.
     var temp = (value).toString().split("").map(Number);
-    temp[0] += 1;
-    var result = temp;
-    for (var i = temp.length - 1; i > 0; i--) {
-        if (temp[i] === 0) {
-            result = temp.map(function() {
-                return temp[0];
-            });
-        } else if (temp[i] > 0) {
-            result[i] = 0;
-        } else {
-            result[i] += 1;
-        }
+    //A copy of the user input.
+    var result = temp.slice();
+
+    //find duplicates in the array
+    var duplicates = temp.filter(function(currentValue) {
+        return result.indexOf(currentValue) > -1;
+    });
+
+    //increase the value of the array by 1 and check for duplicates 
+    function check() {
+        result = parseInt(result.join("")) + 1;
+        result = result.toString().split("").map(Number);
+        duplicates = temp.filter(function(currentValue) {
+            return result.indexOf(currentValue) > -1;
+        });
+
     }
+
+    //As long as there are duplicates run the check function
+    while (duplicates.length > 0) {
+        check();
+    }
+
+
+    console.log(result);
+
+
+    //returns final results results
     return result.join("");
 }
 
-console.log(uniqueIncrement());
+//function to display results in the browser
+function populateField(x) {
+    document.getElementById("output").value = uniqueIncrement(x);
+}

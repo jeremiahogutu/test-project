@@ -1,0 +1,21 @@
+body {
+	text-align: center;
+	background-color: #7575a3;
+}
+.wrapper {
+	margin: 5em auto;
+	width: 100%;
+	padding: 5px;
+}
+
+.divSpacing {
+	margin-bottom: 2em;
+}
+
+.outputLabel {
+	margin-right: 17px;
+}
+
+.btnspacing {
+	margin-left: 5em;
+}
