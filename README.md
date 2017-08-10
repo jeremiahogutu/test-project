@@ -1,6 +1,6 @@
 # test-project
 
-In this project I created a program that increments a value inputed by the user until we get the first possible outcome where all digits in the new value are unique.
+In this project I created a program that increments a value inputed by the user until we get the first possible outcome where all digits in the new value are unique from the original value entered by the user.
 
 example 
 
