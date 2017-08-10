@@ -1,6 +1,7 @@
 function uniqueIncrement(value) {
 	//change the user input to a string.
     var temp = (value).toString().split("").map(Number);
+    
     //A copy of the user input.
     var result = temp.slice();
 
@@ -23,10 +24,6 @@ function uniqueIncrement(value) {
     while (duplicates.length > 0) {
         check();
     }
-
-
-    console.log(result);
-
 
     //returns final results results
     return result.join("");
