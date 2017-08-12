@@ -1,5 +1,5 @@
 function uniqueIncrement(value) {
-	//change the user input to a string.
+	//change the user input to an array of numbers.
     var temp = (value).toString().split("").map(Number);
     
     //A copy of the user input.
